@@ -1,0 +1,21 @@
+﻿#whatif{
+    transition:all 1s ease-in-out;
+    opacity:0;
+    &.active{
+        opacity:1;
+    }
+    max-width:200px;
+    height:1em;
+    border:1px solid #000;
+    padding:1em;
+
+    position:fixed;
+    $padding : 100px;
+    .whatif-topright &{right:$padding;top:$padding;}
+    .whatif-bottomright &{right:$padding;bottom:$padding;}
+    .whatif-topleft &{left:$padding;top:$padding;}
+    .whatif-bottomleft &{left:$padding;bottom:$padding;}
+    .whatif-topcenter &{left:0;right:0;margin:auto auto}
+    .whatif-bottomcenter &{bottom:$padding;left:0;right:0;margin:auto auto}
+    .whatif-center &{bottom:0;top:0;left:0;right:0;margin:auto auto}
+}
