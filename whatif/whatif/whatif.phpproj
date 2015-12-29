@@ -25,9 +25,10 @@
     <Folder Include="001\" />
     <Folder Include="000\" />
     <Folder Include="Properties\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="000\whatif.css" />
+    <Compile Include="000\whatif.css" />
     <Content Include="000\whatif.min.css">
       <SubType>Content</SubType>
       <DependentUpon>000\whatif.css</DependentUpon>
@@ -40,6 +41,7 @@
       <SubType>Content</SubType>
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\tomorrowkings.pubxml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\DEVSENSE\PHP Tools\VS$(VisualStudioVersion)\Devsense.PHP.MsWebApplication.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
