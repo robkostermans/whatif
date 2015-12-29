@@ -29,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="000\whatif.css" />
+    <Content Include="000\readme.md" />
     <Content Include="000\whatif.min.css">
       <SubType>Content</SubType>
       <DependentUpon>000\whatif.css</DependentUpon>
