@@ -1,0 +1,54 @@
+﻿@import "components/_normalize.scss";
+//@import "components/_icons.scss";
+
+@import "components/_canvas.scss";
+
+@import "components/_levels.scss";
+@import "components/_sidebar.scss";
+@import "components/_content.scss";
+
+@import "components/_church.scss";
+@import "components/_pins.scss";
+@import "components/_sets.scss";
+
+
+//
+
+
+@media screen and (max-width: 65.625em), screen and (max-height: 40.625em) {
+	.main {
+		width: 100vw;
+	}
+	.spaces-list,
+	.search {
+		width: 100vw;
+		right: 100%;
+		left: auto;
+	}
+	.spaces-list--open,
+	.spaces-list--open .search {
+		right: 0;
+	}
+	.open-search,
+	.close-search {
+		position: absolute;
+		display: block;
+		top: 0;
+		right: 0;
+		z-index: 1000;
+	}
+	
+	.container {
+		overflow: hidden;
+	}
+	.container--overflow {
+		overflow: auto;
+	}
+	.content__item {
+		overflow: auto;
+	}
+	.-header {
+		padding-right: 4em;
+		text-align: left;
+	}
+}

@@ -2,5 +2,17 @@
   {
     "outputFile": "000/whatif.css",
     "inputFile": "000/whatif.scss"
+  },
+  {
+    "outputFile": "001/style.css",
+    "inputFile": "001/style.scss"
+  },
+  {
+    "outputFile": "002/wireframe.css",
+    "inputFile": "002/wireframe.scss"
+  },
+  {
+    "outputFile": "003/css/style.css",
+    "inputFile": "003/css/style.scss"
   }
 ]

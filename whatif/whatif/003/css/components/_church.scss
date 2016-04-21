@@ -1,0 +1,259 @@
+﻿@font-face {
+	font-family: 'codropsicons';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: table;
+}
+
+.clearfix::after {
+	clear: both;
+}
+
+body {
+	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #515158;
+	background: #f0f0f0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: #aaa;
+	outline: none;
+}
+
+a:hover,
+button:hover {
+	color: #515158;
+	outline: none;
+}
+
+a:focus,
+button:focus {
+	outline: none;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+/* Icons */
+.icon {
+	display: block;
+	width: 1em;
+	height: 1em;
+	margin: 0 auto;
+	fill: currentColor;
+}
+
+.container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* Header */
+
+.header {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 1.5em 1em;
+	text-align: center;
+}
+
+.header h1 {
+	font-size: 1.15em;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0 0 0 1em;
+}
+
+/* Top Navigation Style */
+
+.codrops-links {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.codrops-links::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
+	transform: rotate3d(0, 0, 1, 22.5deg);
+}
+
+.codrops-icon {
+	display: inline-block;
+	width: 1.5em;
+	margin: 0.5em;
+	padding: 0em 0;
+	text-decoration: none;
+}
+
+.codrops-icon span {
+	display: none;
+}
+
+.codrops-icon::before {
+	font-family: 'codropsicons';
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	margin: 0 5px;
+	text-transform: none;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon--drop::before {
+	content: '\e001';
+	color: #09c;
+}
+
+.codrops-icon--prev::before {
+	content: '\e004';
+}
+
+.main {
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: calc(100vw - 300px);
+	height: 100vh;
+}
+
+
+.project-description{
+    $height:100px;
+    $width:100px;
+    position:absolute;
+    width:$width;
+    height:$height;
+    z-index:1000;
+    margin:1rem;
+    padding:1rem;
+    background-color:#d7d7dc;
+    border:1px solid #515158;
+    overflow:hidden;
+    *{
+        opacity:0;
+        transition:opacity 0.15s ease-in;
+    }
+    &:before{
+        display:block;
+        background:#d7d7dc;
+        position:absolute;
+        top:0;
+        left:0;
+        width:$width;
+        line-height:$height;
+        opacity:1;
+        content:"?";
+        text-align:center;
+        font-size:2rem;
+    }
+    &:hover{
+        overflow:auto;
+        width:$width * 4;
+        height:$height * 6;
+        &:before{
+            opacity:0;
+        }
+        *{
+            opacity:1;
+            transition:opacity 0.15s ease-in;
+        }
+    }
+}
+
+
+
+
+/* Level map */
+
+.map__ground {
+	fill: #d7d7dc;
+}
+
+.map__outline {
+	-webkit-transition: fill 0.3s;
+	transition: fill 0.3s;
+	fill: #bbb;
+}
+
+.level:hover .map__outline,
+.level--current .map__outline {
+	fill: #a6a3a8;
+}
+
+.map__tree {
+	fill: #7bad7f;
+}
+
+.map__lake {
+	fill: #a2bbdd;
+}
+
+.map__space {
+	-webkit-transition: fill-opacity 0.8s;
+	transition: fill-opacity 0.8s;
+	fill: #bdbdbd;
+	fill-opacity: 0.6;
+}
+
+.level--current .map__space {
+	fill-opacity: 1;
+}
+
+ .map__space--selected {
+ 	fill: darken($color-green,10%);
+ }
+
+
+ 
+#fill_floor polygon{
+    fill: darken($color-green,0%) !important
+}
+
+#outline_floor{
+    fill:darken($color-green,10%) !important;
+}
+
+
+
+
+

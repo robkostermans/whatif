@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="application-name" content="Microsoft Content Hub">
+    <meta name="viewport" content="width=device-width, user-scalable=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="Cache-control" content="no-cache">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <link href="wireframe.min.css" rel="stylesheet" />
+</head>
+<body ng-app="wireframeApp">
+    <section id="canvas">
+            <md-toolbar layout="row" class="md-primary">
+                <i class="material-icons">menu</i>
+                <i class="material-icons right">search</i>
+            </md-toolbar>
+                <md-toolbar class="md-padding md-primary">
+                   
+                    <div>helo wrld</div>
+                </md-toolbar>
+
+
+        <div ng-controller="AppCtrl" class="sample" layout="column" ng-cloak>
+            <md-content class="">
+                <md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect class="md-primary">
+                    <md-tab ng-repeat="tab in tabs"
+                            ng-disabled="tab.disabled"
+                            label="{{tab.title}}"
+                            class="md-primary"
+                            >
+                        <div class="demo-tab tab{{$index%4}} md-padding">
+                            <div ng-bind="tab.content"></div>
+                        </div>
+                    </md-tab>
+                </md-tabs>
+            </md-content>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+    <script src="wireframe.js"></script>
+
+</body>
+</html>

@@ -10,6 +10,12 @@
     <OutputPath>.</OutputPath>
     <RootNamespace>whatif</RootNamespace>
     <ProjectTypeGuids>{73520F3B-57D4-4D7D-8280-D81F0A3C992B};{349C5851-65DF-11DA-9384-00065B846F21};{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <SaveServerSettingsInUserFile>false</SaveServerSettingsInUserFile>
+    <Runtime>PHP</Runtime>
+    <RuntimeVersion>5.6</RuntimeVersion>
+    <EnvName>PHPDev</EnvName>
+    <PHPDevHostName>localhost</PHPDevHostName>
+    <PHPDevAutoPort>true</PHPDevAutoPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>
@@ -18,12 +24,31 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="000\md-parser\Markdown.inc.php" />
+    <Compile Include="000\md-parser\Markdown.php" />
+    <Compile Include="000\md-parser\MarkdownExtra.inc.php" />
+    <Compile Include="000\md-parser\MarkdownExtra.php" />
+    <Compile Include="000\md-parser\MarkdownInterface.inc.php" />
+    <Compile Include="000\md-parser\MarkdownInterface.php" />
     <Compile Include="000\whatif.php" />
     <Compile Include="index.php" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="000\md-parser\" />
     <Folder Include="001\" />
     <Folder Include="000\" />
+    <Folder Include="002\" />
+    <Folder Include="002\templates\" />
+    <Folder Include="003\" />
+    <Folder Include="003\css\" />
+    <Folder Include="003\css\components\" />
+    <Folder Include="003\fonts\" />
+    <Folder Include="003\fonts\codropsicons\" />
+    <Folder Include="003\fonts\churchicons\" />
+    <Folder Include="003\img\" />
+    <Folder Include="003\img\maps\" />
+    <Folder Include="003\img\symbols\" />
+    <Folder Include="003\js\" />
     <Folder Include="Properties\" />
     <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
@@ -35,8 +60,68 @@
       <DependentUpon>000\whatif.css</DependentUpon>
     </Content>
     <Content Include="000\whatif.scss" />
+    <Content Include="001\coraline2.jpg" />
+    <Content Include="001\dragon.jpg" />
     <Content Include="001\index.html" />
     <Content Include="001\readme.md" />
+    <Content Include="001\script.js" />
+    <Content Include="001\style.css" />
+    <Content Include="001\style.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>001\style.css</DependentUpon>
+    </Content>
+    <Content Include="001\style.scss" />
+    <Content Include="002\templates\tab2.html" />
+    <Content Include="002\templates\tab1.html" />
+    <Content Include="002\wireframe.js" />
+    <Content Include="002\index.html" />
+    <Content Include="002\wireframe.css">
+      <SubType>Content</SubType>
+      <DependentUpon>002\wireframe.scss</DependentUpon>
+    </Content>
+    <Content Include="002\wireframe.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>002\wireframe.css</DependentUpon>
+    </Content>
+    <Content Include="002\wireframe.scss" />
+    <Content Include="003\css\components\_canvas.scss" />
+    <Content Include="003\css\components\_content.scss" />
+    <Content Include="003\css\components\_icons.scss" />
+    <Content Include="003\css\components\_levels.scss" />
+    <Content Include="003\css\components\_normalize.scss" />
+    <Content Include="003\css\components\_church.scss" />
+    <Content Include="003\css\components\_pins.scss" />
+    <Content Include="003\css\components\_sets.scss" />
+    <Content Include="003\css\components\_sidebar.scss" />
+    <Content Include="003\css\components\_variables.scss" />
+    <Content Include="003\css\style.css" />
+    <Content Include="003\css\style.min.css" />
+    <Content Include="003\css\style.scss" />
+    <Content Include="003\fonts\churchicons\icomoon.eot" />
+    <Content Include="003\fonts\churchicons\icomoon.svg" />
+    <Content Include="003\fonts\churchicons\icomoon.ttf" />
+    <Content Include="003\fonts\churchicons\icomoon.woff" />
+    <Content Include="003\fonts\codropsicons\codropsicons.eot" />
+    <Content Include="003\fonts\codropsicons\codropsicons.svg" />
+    <Content Include="003\fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="003\fonts\codropsicons\codropsicons.woff" />
+    <Content Include="003\fonts\codropsicons\license.txt" />
+    <Content Include="003\img\maps\church_01.svg" />
+    <Content Include="003\img\maps\level-0.svg" />
+    <Content Include="003\img\maps\level-1.svg" />
+    <Content Include="003\img\maps\level-2.svg" />
+    <Content Include="003\img\maps\level-3.svg" />
+    <Content Include="003\img\surroundings.svg" />
+    <Content Include="003\img\symbols\icon-pin.svg" />
+    <Content Include="003\index.php" />
+    <Content Include="003\js\church.js" />
+    <Content Include="003\js\classie.js" />
+    <Content Include="003\js\hammer.min.js" />
+    <Content Include="003\js\jquery-ui.min.js" />
+    <Content Include="003\js\list.min.js" />
+    <Content Include="003\js\main.js" />
+    <Content Include="003\js\modernizr-custom.js" />
+    <Content Include="003\readme.md" />
     <Content Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults">
       <SubType>Content</SubType>

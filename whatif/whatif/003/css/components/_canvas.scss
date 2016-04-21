@@ -1,0 +1,78 @@
+﻿@import "_variables.scss";
+
+.canvas {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+    transform:scale3d(0.8,0.8,0.8);
+	perspective: 3500px;
+	perspective-origin: 0% 50%;
+	transition: transform 1s;
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    &--focused{
+        transform:scale3d(1,1,1);
+    }
+    &--inactive{
+        left:-200%;
+    }
+}
+
+.canvas.canvas--content-open {
+	transform: translate3d(0,-25%,0) scale3d(0.8,0.8,1);
+}
+
+
+/* Level nav */
+.canvasnav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	-webkit-transition: opacity 0.8s;
+	transition: opacity 0.8s;
+    .nav__button--up{}
+    .nav__button--down{}
+    @media #{$compact} {
+		top: 4em;
+	}
+}
+
+.canvasnav--hidden {
+	pointer-events: none;
+	opacity: 0;
+}
+
+
+/* Box button */
+.boxbutton {
+	font-size: 2em;
+	display: block;
+	width: 2em;
+	height: 2em;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	border: 0;
+	background: #d7d7dc;
+}
+
+.boxbutton--dark {
+	background: #c4c4c7;
+}
+
+.boxbutton--darker {
+	background: #2c2c2f;
+}
+
+.boxbutton--alt {
+	background: #3d1975;
+}
+
+.boxbutton--disabled,
+.boxbutton--disabled:focus,
+.boxbutton--disabled:hover {
+	cursor: default;
+	pointer-events: none;
+	opacity: 0.2;
+}

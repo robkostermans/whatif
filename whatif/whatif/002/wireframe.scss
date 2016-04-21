@@ -1,0 +1,73 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
+
+$font : 'Raleway', sans-serif;
+$color : #000;
+$unit : 5px;
+$canvas-size:320;
+
+html{
+   
+
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: $font;
+    font-weight:300;
+     background:#f0f0f1;
+}
+#canvas{
+
+    background:#fff;
+    //border:1px solid #E4E4E4;
+    box-sizing:border-box;
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    max-width:320px;
+    max-height:568px;
+}
+
+.right{
+    float:right;
+}
+
+@for $i from 0 through 100{
+    .fill-#{$i}{background-color:lighten($color,$i);}
+}
+
+@for $i from 0 through 100{
+    .text-#{$i}{color:lighten($color,$i);}
+}
+
+@for $i from 0 through 100{
+    .height-#{$i}{
+        height:$i * 1%;
+    }
+    .width-#{$i}{
+        width:$i * 1%;
+    }
+}
+
+@for $i from 0 through 100{
+    $u : 0.5em;
+    .padding-r#{$i}{padding-right:($i * $u);}
+    .padding-l#{$i}{padding-left:($i * $u);}
+    .padding-t#{$i}{padding-top:($i * $u);}
+    .padding-b#{$i}{padding-bottom:($i * $u);}
+}
+
+a, a:visited, a:hover{
+    text-decoration:none;
+    color:inherit;
+}
+
+.cell{
+    box-sizing:border-box;
+    padding:8px;
+}
+

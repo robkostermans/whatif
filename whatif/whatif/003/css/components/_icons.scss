@@ -1,0 +1,52 @@
+﻿@import "_variables.scss";
+
+@font-face {
+    font-family: 'icomoon';
+    src:    url('#{$icon-directory}icomoon.eot?809usk');
+    src:    url('#{$icon-directory}icomoon.eot?809usk#iefix') format('embedded-opentype'),
+        url('#{$icon-directory}icomoon.ttf?809usk') format('truetype'),
+        url('#{$icon-directory}icomoon.woff?809usk') format('woff'),
+        url('#{$icon-directory}icomoon.svg?809usk#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform:translate3d(0,0,0);
+    position:relative;
+    &:after{
+        content: "\e900"; //pin
+        color:#515158;
+    }
+    &:before{
+        //background-color:#515158;
+        width:100%;
+        color:#fff;
+        position:absolute;
+        display:block;
+        text-align:center;
+        font-size:0.5em;
+        margin-top:0.2em;
+    }
+}
+
+.icon-pin:before {
+    content: "\e900";
+}
+
+.icon-meeting:before {
+    content: "\e901";
+    
+}
+    */

@@ -1,0 +1,23 @@
+﻿//
+//  SETUP
+//
+$icon-directory : "../fonts/churchicons/";
+$layer-spacing : 10;
+//
+//
+//
+$compact  : "screen and (max-width: 65.625em), screen and (max-height: 40.625em)";
+
+//
+//  COLORS
+//
+$color-green : rgb(89,173,70);
+
+//
+//  LABELS
+//  
+$labels: (
+  rooms: "Vergaderruimtes",
+  medium: 992px,
+  large: 1200px
+);
